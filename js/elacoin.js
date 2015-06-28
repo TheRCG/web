@@ -16,7 +16,7 @@ $(document).ready(function() {
 function queryCryptsyData() {
 	$.ajax({
 		type: 'GET',
-		url: 'http://pubapi2.cryptsy.com/api.php?method=singlemarketdata&marketid=12',
+		url: 'pubapi2.cryptsy.com/api.php?method=singlemarketdata&marketid=12',
 		dataType: 'jsonp',
 		success: function(result) {
 			if (result.success == 1 && result.return ) {
@@ -73,7 +73,7 @@ function queryBPIData() {
 function queryCurrentNetworkHashRate(e) {
 	$.ajax({
 		type: 'GET',
-		url: 'http://chainz.cryptoid.info/elc/api.dws?q=netmhashps',
+		url: 'http://elc.webboise.com/chain/elacoin/q/nethash/1/-10?format=jsonp',
 		contentType: 'application/jsonp',
 		dataType: "jsonp",
 		jsonp: 'jsonp',
@@ -87,7 +87,7 @@ function queryCurrentNetworkHashRate(e) {
 function queryTotalMinedCoins(e) {
 	$.ajax({
 		type: 'GET',
-		url: 'http://chainz.cryptoid.info/elc/api.dws?q=totalbc',
+		url: 'http://elc.webboise.com/chain/Elacoin/q/totalbc?format=jsonp',
 		contentType: 'application/jsonp',
 		dataType: "jsonp",
 		jsonp: 'jsonp',
@@ -134,7 +134,7 @@ function queryChartData(interval, blocks) {
 	window.interval = interval;
 	$.ajax({
 		type: 'GET',
-		url: 'http://chainz.cryptoid.info/elc/api.dws?q=netmhashps' + interval + '/-' + blocks + '?format=jsonp',
+		url: 'http://elc.webboise.com/chain/elacoin/q/nethash/' + interval + '/-' + blocks + '?format=jsonp',
 		contentType: 'application/jsonp',
 		dataType: "jsonp",
 		jsonp: 'jsonp',
